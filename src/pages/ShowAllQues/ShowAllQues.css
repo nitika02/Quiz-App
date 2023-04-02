@@ -1,0 +1,40 @@
+.container {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.quiz-details {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+.quiz-details h3 {
+    font-size: 20px;
+}
+
+.quiz-details h1 {
+    font-size: 30px;
+}
+
+.ques-box {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.ques-options {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.ques-box h1 {
+    font-size: 40px;
+}
+
+.ques-options span {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+

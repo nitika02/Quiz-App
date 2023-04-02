@@ -5,6 +5,7 @@ import StartPage from './Start/StartPage'
 import AddQuestion from './AddQuestions/AddQuestion'
 import Quiz from './Quiz/Quiz'
 import Result from './Result/Result'
+import ShowAllQues from './ShowAllQues/ShowAllQues'
 
 
 const AllRoutes = () => {
@@ -14,6 +15,7 @@ const AllRoutes = () => {
         time: "",
         marks: ""
     })
+    const [score, setScore] = useState(0)
   return (
     <div>
         <Header />
@@ -21,8 +23,8 @@ const AllRoutes = () => {
             <Route path="/" element={<StartPage quizDetails={quizDetails} setQuizDetails={setQuizDetails} />} />
             <Route path="/add" element={<AddQuestion quizDetails={quizDetails} />} />
             <Route path="/quiz" element={<Quiz />} />
-            <Route path="/result" element={<Result />} />
-            
+            <Route path="/result" element={<Result score={score} />} />
+            <Route path="/ques" element={<ShowAllQues />} />
         </Routes>
     </div>
   )

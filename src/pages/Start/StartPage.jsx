@@ -27,6 +27,7 @@ const StartPage = ({quizDetails, setQuizDetails}) => {
             time: "",
             marks: ""
         })
+        localStorage.setItem("quizDetails", JSON.stringify(quizDetails))
         }
         
     }
