@@ -3,7 +3,12 @@ import "./Footer.css"
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div style={{
+        textAlign: "center",
+        marginBottom: 10,
+      }}>
+        Made with love by Nitika Garg
+    </div>
   )
 }
 
