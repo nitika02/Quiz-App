@@ -12,7 +12,7 @@ const AllRoutes = () => {
     const [quizDetails, setQuizDetails] = useState({
         name: "",
         desc: "",
-        time: "",
+        time: 0,
         marks: ""
     })
     const [score, setScore] = useState(0)

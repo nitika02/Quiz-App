@@ -18,7 +18,7 @@ const ShowAllQues = () => {
         }
         getQuestions()
         
-    }, [questions])
+    }, [])
 
     const gotToQuiz = () => {
         navigate("/quiz")
