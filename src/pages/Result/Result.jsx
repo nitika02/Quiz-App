@@ -20,7 +20,7 @@ const Result = ({score}) => {
 
   return (
     <div className='result'>
-        <span className='title'>Final Score : {score}</span>
+        <span className='title'>Final Score : {score}/{quiz.marks}</span>
         <Button variant='contained' color="primary" size="large" style={{alignSelf: "center", marginTop: 20}} onClick={gotTohome}>GO TO HOMEPAGE</Button>
     </div>
   )

@@ -41,7 +41,7 @@ const StartPage = ({quizDetails, setQuizDetails}) => {
                 <TextField label="Enter Quiz Description" variant="outlined" name="desc" value={quizDetails.desc} onChange={(e) => handleChange(e)} />
                 <TextField label="Enter total marks" variant="outlined" name="marks" value={quizDetails.marks} onChange={(e) => handleChange(e)} />
                 <TextField label="Enter Time Limit in mins" variant="outlined" name="time" value={quizDetails.time} onChange={(e) => handleChange(e)} />
-                <Button variant="contained" color="primary" onClick={handleAddQuestion}>Add Questions</Button>
+                <Button variant="contained" color="primary" onClick={handleAddQuestion}>Create Quiz</Button>
             </div>
         </div>
         <img src="../assets/quiz.svg" className='banner' alt="" />

@@ -51,10 +51,10 @@ const ShowAllQues = () => {
                 <div className='ques-box' key={id}>
                     <h1>Q {id+1}. {ques.ques}</h1>
                     <div className='ques-options'>
-                        <span>a. {ques.option1}</span>
-                        <span>b. {ques.option2}</span>
-                        <span>c. {ques.option3}</span>
-                        <span>d. {ques.option4}</span>
+                        <span>a. {ques.options[0]}</span>
+                        <span>b. {ques.options[1]}</span>
+                        <span>c. {ques.options[2]}</span>
+                        <span>d. {ques.options[3]}</span>
                     </div>
                     <Button style={{marginTop: 40, fontSize: 10}} variant='contained' size="large" onClick={() => deleteQues(ques.id)}>Delete</Button>
                 </div>

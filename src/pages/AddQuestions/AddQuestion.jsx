@@ -11,7 +11,7 @@ const AddQuestion = ({quizDetails}) => {
         ques: "",
         option1: "",
         option2: "",
-        option3 : "",
+        option3: "",
         option4: "",
         correct : ""
     })
@@ -38,14 +38,13 @@ const AddQuestion = ({quizDetails}) => {
     const createQuestion = async () => {
         await addDoc(userCollectionRef, {
             ques: questions.ques,
-            option1: questions.option1,
-            option2: questions.option2,
-            option3: questions.option3,
-            option4: questions.option4,
+            options : [questions.option1, questions.option2, questions.option3, questions.option4],
             correct: questions.correct
         })
     }
-    
+    const gotToQuiz = () => {
+        navigate("/quiz")
+    }
     const handleAddQuestion = (event) => {
         event.preventDefault()
         if(!questions.ques || !questions.option1 || !questions.option2 || !questions.option3 || !questions.correct) {
@@ -86,6 +85,7 @@ const AddQuestion = ({quizDetails}) => {
             <div>
                 <Button style={{marginRight: 30}} variant="contained" size="large" onClick={handleAddQuestion}>Add Question</Button>
                 <Button variant="contained" size="large" onClick={showQuestions}>Show All Questions</Button>
+                <Button style={{marginLeft : 30}} variant='contained' size="large" onClick={gotToQuiz}>Start Quiz</Button>
             </div>
         </div>
     </div>
