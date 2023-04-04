@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Instalation
+Clone the repository to your local machine.
+Navigate to the project directory in your terminal.
+Run npm install to install the necessary dependencies.
+
+## Running the App
+To start the app, run npm start in your terminal. This will start the app in development mode and open it in your default browser at http://localhost:3000/.
+
 ## Available Scripts
 
 In the project directory, you can run:
