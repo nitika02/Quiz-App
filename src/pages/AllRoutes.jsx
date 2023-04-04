@@ -23,7 +23,7 @@ const AllRoutes = () => {
             <Route path="/" element={<StartPage quizDetails={quizDetails} setQuizDetails={setQuizDetails} />} />
             <Route path="/add" element={<AddQuestion quizDetails={quizDetails} />} />
             <Route path="/quiz" element={<Quiz score={score} setScore={setScore} />} />
-            <Route path="/result" element={<Result score={score} />} />
+            <Route path="/result" element={<Result score={score} setScore={setScore} />} />
             <Route path="/ques" element={<ShowAllQues />} />
         </Routes>
     </div>

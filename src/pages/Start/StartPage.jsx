@@ -37,10 +37,10 @@ const StartPage = ({quizDetails, setQuizDetails}) => {
             <span style={{fontSize: 30}}>Quiz Settings</span>
             <div className='settings__select'>
                 {error && <ErrorMessage>Please Fill all the fields</ErrorMessage>}
-                <TextField label="Enter Quiz Name" variant="outlined" name="name" value={quizDetails.name} onChange={(e) => handleChange(e)} />
-                <TextField label="Enter Quiz Description" variant="outlined" name="desc" value={quizDetails.desc} onChange={(e) => handleChange(e)} />
-                <TextField label="Enter total marks" variant="outlined" name="marks" value={quizDetails.marks} onChange={(e) => handleChange(e)} />
-                <TextField label="Enter Time Limit in mins" variant="outlined" name="time" value={quizDetails.time} onChange={(e) => handleChange(e)} />
+                <TextField label="Enter Quiz Name" variant="outlined" name="name" value={quizDetails.name} style={{marginBottom: 40}} onChange={(e) => handleChange(e)} />
+                <TextField label="Enter Quiz Description" variant="outlined" name="desc" value={quizDetails.desc} style={{marginBottom: 40}} onChange={(e) => handleChange(e)} />
+                <TextField label="Enter total marks" variant="outlined" name="marks" value={quizDetails.marks} style={{marginBottom: 40}} onChange={(e) => handleChange(e)} />
+                <TextField label="Enter Time Limit in mins" variant="outlined" name="time" value={quizDetails.time} style={{marginBottom: 40}} onChange={(e) => handleChange(e)} />
                 <Button variant="contained" color="primary" onClick={handleAddQuestion}>Create Quiz</Button>
             </div>
         </div>

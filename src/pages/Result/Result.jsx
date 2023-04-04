@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import "./Result.css"
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
+import { collection, deleteDoc, getDocs } from 'firebase/firestore'
+import { db } from '../../firebase/firebaseConfig'
 
-const Result = ({score}) => {
+const Result = ({score, setScore}) => {
     const navigate = useNavigate()
     const quiz = JSON.parse(localStorage.getItem("quizDetails"))
 
@@ -13,9 +15,20 @@ const Result = ({score}) => {
         }
     }, [quiz.name, navigate])
 
+    const deleteAllDocuments = async () => {
+        const collectionRef = collection(db, "quiz");
+        const snapshot = await getDocs(collectionRef);
+        snapshot.forEach((doc) => {
+          deleteDoc(doc.ref);
+        });
+        
+    }
+
     const gotTohome = () => {
         localStorage.clear()
         navigate("/")
+        deleteAllDocuments()
+        setScore(0)
     }
 
   return (
